@@ -7,6 +7,8 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 
 import useScroll from '@/hooks/use-scroll';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import logo from '@/assets/f2rpiyo98pso2ljoe4di.webp'
 
 const Header = () => {
   const scrolled = useScroll(5);
@@ -28,7 +30,12 @@ const Header = () => {
             href="/"
             className="flex flex-row space-x-3 items-center justify-center md:hidden"
           >
-            <span className="h-7 w-7 bg-zinc-300 rounded-lg" />
+            <span className="h-7 w-7 bg-zinc-300 rounded-lg" >
+            <Image
+              src={logo}
+              alt="logo"
+            />
+            </span>
             <span className="font-bold text-xl flex ">Logo</span>
           </Link>
         </div>
